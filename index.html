@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Mental Parceiro - Ifamily • iDoc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1f2328;
+        }
+
+        .gh-card {
+            background-color: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .gh-input {
+            background-color: #f6f8fa;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            color: #1f2328;
+        }
+
+        .gh-input:focus {
+            border-color: #dc2626;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+            background-color: #ffffff;
+        }
+
+        .btn-primary {
+            background-color: #dc2626;
+            color: white;
+            font-weight: 600;
+            border: 1px solid rgba(27, 31, 36, 0.15);
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #b91c1c;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+        }
+
+        .section-title {
+            border-bottom: 1px solid #d0d7de;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #57606a;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        @media (min-width: 640px) {
+            .checkbox-group {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            background-color: #f6f8fa;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .checkbox-item:hover {
+            background-color: #ffffff;
+            border-color: #dc2626;
+        }
+
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #dc2626;
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2357606a'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-12 px-4">
+
+    <div class="max-w-3xl mx-auto">
+        
+        <!-- Cabeçalho -->
+        <div class="text-center mb-10">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-50 mb-4 border border-blue-100">
+                <i data-lucide="users" class="w-8 h-8 text-blue-600"></i>
+            </div>
+            <h1 class="text-3xl font-extrabold tracking-tight text-gray-900 mb-1">
+                Saúde Mental - <span class="text-blue-600">Pai/Parceiro(a) 💙</span>
+            </h1>
+            <p class="text-gray-500 font-medium italic">Ifamily • iDoc</p>
+        </div>
+
+        <!-- Formulário -->
+        <form 
+            action="https://script.google.com/a/macros/ifood.com.br/s/AKfycbw1CZVA0pCmNnOnXJxpUG7BPI396JAQpuulEIxRJ-JhyrLzL0kF-wkZGnOoQV1zs6p2mQ/exec" 
+            method="GET" 
+            class="gh-card shadow-sm"
+        >
+            <div class="bg-[#f6f8fa] p-4 border-b border-[#d0d7de] flex items-center justify-between">
+                <div class="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                    <i data-lucide="heart-handshake" class="w-4 h-4 text-blue-500"></i>
+                    Apoio e Bem-estar Familiar
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    <span class="text-[10px] text-gray-500 font-bold uppercase">Privado</span>
+                </div>
+            </div>
+
+            <div class="p-8 space-y-10">
+                
+                <!-- Identificação -->
+                <section>
+                    <h3 class="section-title">
+                        <i data-lucide="user" class="w-4 h-4"></i> Identificação
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">Nome Completo</label>
+                            <input name="nome" type="text" required class="gh-input w-full p-2.5 text-sm" placeholder="Seu nome">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">E-mail iFood</label>
+                            <input name="email_ifood" type="email" required class="gh-input w-full p-2.5 text-sm" placeholder="seuemail@ifood.com.br">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Percepção sobre o bebê -->
+                <section>
+                    <h3 class="section-title">
+                        <i data-lucide="baby" class="w-4 h-4"></i> Sentimentos sobre a Chegada
+                    </h3>
+                    <div class="space-y-4">
+                        <label class="text-sm font-semibold text-gray-700">Como você está lidando com a chegada do bebê?</label>
+                        <p class="text-[10px] text-gray-400 mb-4">(Você pode marcar mais de uma opção)</p>
+                        
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="lidando_animado" value="Sim">
+                                <span class="text-sm">Animado(a)</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="lidando_ansioso" value="Sim">
+                                <span class="text-sm">Ansioso(a)</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="lidando_inseguro" value="Sim">
+                                <span class="text-sm">Inseguro(a)</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="lidando_confiante" value="Sim">
+                                <span class="text-sm">Confiante</span>
+                            </label>
+                            <label class="checkbox-item md:col-span-2">
+                                <input type="checkbox" name="lidando_sobrecarregado" value="Sim">
+                                <span class="text-sm">Sobrecarregado(a)</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sinais de Alerta e Suporte -->
+                <section>
+                    <h3 class="section-title">
+                        <i data-lucide="brain-circuit" class="w-4 h-4"></i> Avaliação e Suporte
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-1 md:col-span-2">
+                            <label class="text-sm font-semibold text-gray-700">Demonstra sinais de tristeza, ansiedade ou irritabilidade excessiva?</label>
+                            <select name="sinais_excessivos" required class="gh-input w-full p-2.5 text-sm">
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div>
+                        
+                        <div class="space-y-1 md:col-span-2">
+                            <label class="text-sm font-semibold text-gray-700">Gostaria de apoio psicológico?</label>
+                            <select name="apoio_psicologico" required class="gh-input w-full p-2.5 text-sm">
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Botão Enviar -->
+                <div class="pt-8 border-t border-[#d0d7de] flex items-center justify-between">
+                    <p class="text-[10px] text-gray-400 font-medium tracking-tight max-w-[250px]">
+                        O Ifamily iDoc acolhe toda a família. Seus dados estão protegidos.
+                    </p>
+                    <button type="submit" class="btn-primary py-3 px-10 text-sm flex items-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                        Enviar Checkpoint
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <footer class="mt-12 text-center space-y-2">
+            <p class="text-xs text-gray-400 font-bold uppercase tracking-widest">Ifamily iDoc System</p>
+            <div class="flex justify-center gap-3 text-gray-200">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                <i data-lucide="lock" class="w-4 h-4"></i>
+                <i data-lucide="database" class="w-4 h-4"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
